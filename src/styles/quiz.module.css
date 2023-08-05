@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.quizContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    margin: -0px;
+    height: 100vh;
+}
+
+.questionBox{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0.0px  rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 3vh;
+    background-color: rgb(255, 255, 255);
+}
+.quizQuestions{
+    margin: 20px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: inset  0px 0px 5px 0.2px rgb(120, 93, 239);
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+}
+.passage{
+    margin: 20px 0px 0px 20px;
+    height: 94vh;
+    width: 50%;
+    overflow: scroll;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0.1px black;
+    border-radius: 10px;
+    padding: 20px;
+    text-indent: 50px;
+    line-height: 32px;
+    font-style: normal;
+}
+.answerChoice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid;
+    transition: 0.2s;  
+}
+.answerChoice:hover{
+    background-color: rgb(229, 229, 229);
+}
+
+.answerChoice label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.input{
+    padding-top: 10px;
+    width: 20px;
+    border: 20px solid;
+    accent-color: rgb(84, 64, 236);
+    background-color: antiquewhite;
+}
+
+.input:hover{
+    background:green;
+}
+
+.answerbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.submit{
+    text-align: center;
+    align-self: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px;
+    margin: 20px;
+    border-style: solid;
+    border-color:transparent;
+    box-shadow: 0px 0px 2px 1px #301cae;
+    padding: 10px;
+    font-size: 15px;
+    background-color: white;
+    color:black;
+}

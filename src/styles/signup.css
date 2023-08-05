@@ -1,0 +1,180 @@
+body, html
+{
+    margin: 0px;
+}
+p{
+    font-style: normal;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.nameContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signinContainer{
+    height: 100vh;
+    width: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signinText{
+    color:rgb(84, 64, 236);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 40px -10px #5440ec, 10px 0px 20px -10px #8f59ed;
+    -moz-box-shadow: 0px 10px 40px -10px rgb(84, 64, 236), 10px 0px 20px -10px #8f59ed ;
+    box-shadow: 0px 10px 40px -10px rgb(23, 125, 134),  10px 0px 20px -10px #8f59ed ;
+    height: 400px;
+    width: 45%;
+}
+.signupCard{
+    height: 450px; 
+}
+.formCard{
+    line-height: 50px;
+}
+
+.formCardContent{
+    font-weight: normal;
+    text-align: center;
+}
+.formCardContent input{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 95%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    border-bottom: solid;
+    border-radius: 0px;
+    background-color: whitesmoke;
+    border-color: black;
+    color:black;
+    background-color: transparent;
+    
+}
+input{
+    outline-color: transparent; 
+}
+.formCardContent input::placeholder{
+    color: black;
+}
+.signInButton{
+  width: 60%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  border-radius: 5px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 5px 0px black;
+  border-style: solid;
+  border-color:transparent;
+  padding: 10px;
+  font-size: 15px;
+  background-color: white;
+  color:black;
+  transition: 0.2s;
+}
+.signInButton:hover{
+    cursor: pointer;
+    background-color:rgb(218, 217, 217);
+    box-shadow: 0px 5px 5px 1px grey;
+}
+.fillerText{
+    font-style: normal;
+    font-weight: 600;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.divider{
+    margin-top: 50px;  
+}
+.signLink{
+    color:rgb(84, 64, 236) ;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nameinput{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 43%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    border-bottom: solid;
+    border-radius: 0px;
+    background-color:white;
+    border-color: black;
+    color:black;
+    background-color: transparent;
+}
+
+.nameinput::placeholder{
+    color:rgb(84, 64, 236);
+}
+.invalidInput{
+    color: rgb(251, 42, 42);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    font-size: 15px;
+    font-style: normal;   
+}
+.copyright {
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: bolder;
+    top:200;
+    bottom:0;
+    position: absolute;
+}
+
+.formCardContentPasswordSignUp{
+    width: 100%;
+    border-bottom: solid;
+    display: flex;
+}
+
+.formCardContentPasswordSignUp input{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 95%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    background-color: whitesmoke;
+    background-color: transparent;
+}
+.formCardContentPasswordSignUp input::placeholder{
+    color: black;
+}
+.formCardContentPasswordSignUp button{
+    background-color: transparent;
+    border: 0;
+}
+@media screen and (max-width: 500px) {
+    .container{
+        display: flex;
+        width: 100%;
+}
+.signinContainer{
+    height: 200vh;
+    width: 150vh;
+}
+}

@@ -1,0 +1,170 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
+import { db } from '../config/firebase';
+import {doc, getDoc, updateDoc} from "firebase/firestore";
+import { useState } from 'react';
+
+const Account = () => {
+  const { user, logout } = UserAuth();
+  const navigate = useNavigate();
+  const docRef = doc(db, "users", user.email);
+  const [tokens, setTokens] = useState();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate('/');
+      console.log('You are logged out')
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+  const revealTokens = async () => {
+    try{
+        const docSnap = await getDoc(docRef);
+        const token_data = docSnap.data();
+        console.log(token_data["tokens"])
+        setTokens(token_data["tokens"])
+    }
+    catch{
+
+    }
+  }
+
+  const useToken = async () => {
+    try{
+        setTokens(tokens-1)
+        await updateDoc (docRef,{
+            tokens: tokens-1
+        });
+    }
+    catch{
+
+    }
+    console.log(tokens)
+  }
+
+  return (
+    <div className='max-w-[600px] mx-auto my-16 p-4'>
+      <h1 className='text-2xl font-bold py-4'>Account</h1>
+      <p>User Email: </p>
+      <p>You have tokens: {tokens} </p>
+      <button onClick={handleLogout} className='border px-6 py-2 my-4'>
+        Logout
+      </button>
+      <button onClick={revealTokens}>Reveal Tokens</button>
+      <button onClick={useToken}>Use 1 Token</button>
+    </div>
+  );
+};
+
+export default Account;
+
+
+
+
+useEffect(()=>{
+    if (user){
+      try{
+      const getDocument = async ()=>{ 
+        try{
+      const data = await (await getDoc(doc(db,"users",user.email))).data()
+      const result = await data["tokens"]
+      setTokens(result)
+        }
+        catch(error){
+
+        }
+    }
+      getDocument()
+      }
+      catch(error){
+        console.log(error)
+      }
+     
+    }
+  },[user])
+
+
+
+  <div className={styles.toolContainer}>
+            <div className={styles.settings}>
+            <h1>Settings</h1>
+                <div className={styles.settingOptions}>
+                    <label htmlFor="question_type">Question Type</label>
+                    <br />
+                    <select name="question_type" id="">
+                      <option value="rc">Dojo Comprehension (default)</option>
+                      <option value="sa">SAT®/ ACT® Reading Prep</option>
+                      <option value="essay">Essay</option>
+                    </select>
+                </div>
+                <div className={styles.settingOptions}>
+                <label htmlFor="question_amount">Question Amount: </label>
+                <br />
+                <select name="question_amount" id="">
+                      <option value="mc">10</option>
+                      <option value="sa">15</option>
+                      <option value="essay">20</option>
+                </select>
+              </div>
+                <div className={styles.settingOptions}>
+                <label htmlFor="question_amount">Question Format: </label>
+                <br />
+                <select name="question_type" id="">
+                      <option value="mc">Multiple Choice</option>
+                      <option value="sa">Short Answer</option>
+                      <option value="essay">Essay</option>
+                    </select>
+                </div>
+            </div>
+
+             "1": {
+      "question": "Who did the protagonist encounter in the fog?",
+      "choices": ["A. Miss Havisham", "B. Abel Magwitch", "C. Estella", "D. A stranger"],
+      "correct_answer": "B"
+    },
+    "2": {
+      "question": "What was the protagonist's initial reaction to seeing the figure with the lantern?",
+      "choices": ["A. Fear", "B. Gratitude", "C. Confusion", "D. Indifference"],
+      "correct_answer": "A"
+    },
+
+     {questions &&
+            Object.values(questions).map((questions, index) => (
+              <div className={styles.printQuestions} key={index}>
+                <h3 style={{fontFamily: "Verdana", fontStyle:"normal"}}>Question {index + 1}:</h3>
+                <p style={{fontFamily: "TrebuchetMS", fontStyle:"normal"}}>{questions.question}</p>
+                <ul>
+                  {questions.choices.map((choice, choiceIndex) => (
+                    <li style={{fontFamily: "TrebuchetMS", fontStyle:"normal", margin: '10px'}} className="answerChoices" key={choiceIndex}>
+                      {choice}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+
+
+<table className={styles.table}>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Questions</th>
+          <th>Date Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.keys(data).map((key) => (
+          <tr key={key} onClick={() => handleClick(data[key])} className={styles.row}>
+            <td>{data[key].title}</td>
+            <td>{data[key].questions}</td>
+            <td>{data[key].dc}</td>
+          </tr>
+        ))}
+      </tbody>
+</table>
+
+ content: "Generate a 700 word passage in" + req.body.language + " with multiple paragraphs for this prompt:" + req.body.prompt + "I need just the passage and no additional text. No part of the text should be repetitive. Remember, the passage must be at least 700 words in length, no matter what. The passage must be written in this language no matter what:" + req.body.language

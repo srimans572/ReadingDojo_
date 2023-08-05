@@ -1,0 +1,209 @@
+body{
+    background-color:rgb(255, 255, 255);
+    
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: white;
+    border-radius:10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: -10px;
+}
+
+.container_{
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: space-around;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+
+.promptContainer{
+    display: flex;
+    background-color: #f0932b;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.prompt{
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.passageCharCount{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: larger;
+    font-style: normal;
+}
+label{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+.title::after {
+    content: "*";
+    color: red;
+    margin-left:5px;
+  }
+input{
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    width: 98%;
+    border-radius: 5px;
+    outline:palegreen;
+    border: solid;
+    
+}
+
+.promptError{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-style: normal;
+}
+
+input:focus::placeholder{
+    color: transparent;
+    outline: #403b60;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.modal{
+    width:100%;
+    height: auto;
+    padding:050px;
+    background-color: white;
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    top:70%;
+    left: center;
+    outline:none;
+    position: absolute;
+    border-radius: 10px;
+}
+.questionTypes{
+    width: 20%;
+    border: none;
+    border-radius: 0px;
+    outline:none;
+}
+
+.textarea{
+    outline: #403b60;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 98%;
+    padding: 10px;
+    border: solid;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    text-overflow: clip;
+    resize: vertical;
+}
+.textarea:focus::placeholder{
+    color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+
+.generateButton{
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px;
+    margin: 10px;
+    border-style: solid;
+    border-color:transparent;
+    box-shadow: 0px 0px 10px 0px #403b60;
+    padding: 10px;
+    font-size: 15px;
+    background-color: white;
+    color:black;
+    transition: 0.2s;
+}
+
+.loaderButton{
+    text-align: center;
+    align-self: center;
+    width: 20%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px;
+    margin: 10px;
+    border-style: solid;
+    border-color:transparent;
+    box-shadow: 0px 0px 10px 0px #403b60;
+    padding: 10px;
+    font-size: 15px;
+    background-color: white;
+    color:black;
+    transition: 0.2s;
+}
+
+.generateButton:hover, .loaderButton:hover{
+    background-color: rgb(218, 217, 217);
+    cursor: pointer;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    width:98%;
+}
+
+.toolContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Container{
+    width: 50%;
+}
+
+.settings{
+    width: 40%;
+    height: 500px;
+    display: block;
+}
+
+.settingOptions{
+    color: black;
+}
+
+.questionType{
+    display: block;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .container_{
+        display: flex;
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    }
+    .inputContainer{
+        margin-top: 100px;
+        width: 90%;
+    }
+}

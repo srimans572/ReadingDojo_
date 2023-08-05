@@ -1,0 +1,27 @@
+.realPrintContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding:50px;
+    padding-top: 0px;
+}
+.printContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.printQuestions{
+    justify-content: left;
+}
+
+.titlePrint{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.additionalText{
+    transition: 0.2s;
+}
+

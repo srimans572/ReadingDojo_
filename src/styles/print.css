@@ -1,0 +1,202 @@
+.printContainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+.passageBox{
+    width: 48%;
+    padding: 10px;
+    margin: 10px;
+    position:relative;
+    left:0%;
+}
+
+.passagePrompt{
+    font-size: 30px;
+    outline: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 2px .1px ;
+    width: 94%;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.icons{
+    height:25px;
+    width: 30px;
+    margin: 10px;
+}
+.iconsText{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    align-items: center;
+    transition: 0.1s;
+    color: #3a2d91;
+}
+.icons:hover{
+    height: 2em;
+}
+
+.questionActionButtons{
+    font-family: "TrebuchetMS";
+    border-radius: 5px;
+    width: 15%;
+    border-style: solid;
+    border-color:transparent;
+    box-shadow: 0px 0px 5px 0.1px #3a2d91;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: white;
+    color:black;
+    transition: 0.2s;
+}
+
+.questionActionButtons:hover{
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 0.1px #3a2d91;
+}
+
+.passageTextBox{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-indent: 50px;
+    line-height: 20px;
+    line-break:normal;
+    display: inline-block;
+    position:relative;
+    display: flex;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0px 0px 2px 0.1px black;
+}
+.questionBox{
+    width: 48%;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.questionBox::-webkit-scrollbar{
+    display: none;
+}
+
+.questionBoxContainer{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    size-adjust: auto;
+    position:static;
+overflow: auto;    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.questionsActionsBox{
+    border-radius: 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 15px;
+    padding: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.questionActionsSpecific{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.questionActionsSpecifics{
+    display: flex;
+    flex-direction: row;
+}
+
+.questions{
+    height: 100px;
+    width: 93%;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-overflow: ellipsis;
+    resize: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.answerChoices{
+    list-style: none; 
+}
+
+.questionchoices{
+    text-indent: 0px;
+    width: 90%;
+    margin:5px;
+    font-weight:lighter;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.questionchoicesbold{
+    font-weight:bolder;
+    width: 90%;
+    text-indent: 0px;
+    margin:5px;
+}
+
+.questionchoices:hover{
+    background-color: whitesmoke;
+}
+
+
+.revealAnswer{
+    font-family: "TrebuchetMS";
+    border-radius: 5px;
+    width: 100%;
+    border-style: solid;
+    margin: 20px 0px;
+    border-color:transparent;
+    box-shadow: 0px 0px 5px 0.1px #3a2d91;
+    padding: 10px;
+    font-size: 15px;
+    background-color: white;
+    color:black;
+    transition: 0.2s;
+    position: relative;
+}
+.additionalText{
+    padding: 20px;
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:1000px) {
+    .printContainer{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 20px;
+    }
+    .passageBox{
+        width: 95%;
+        padding: 10px;
+        margin: 10px;
+        position:relative;
+        left:0%;
+    }
+    .questionBox{
+        width: 95%;
+        padding: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
